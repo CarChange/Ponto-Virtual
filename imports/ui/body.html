@@ -1,0 +1,28 @@
+<body>
+    
+    
+  <div class="container">
+    <header>
+      <h1>Folha de Ponto Virtual</h1>
+ 
+      {{> loginButtons}}
+      
+      {{#if currentUser}}
+        <form class="multiplex">
+            <input type="number" name="mph" step="0.01" placeholder="Money que ganha por hour">
+            <button type="submit">Manda</button>
+        </form>
+        
+      <form class="new-ponto">
+          <button>Novo ponto</button>
+      </form>
+      {{/if}}
+    </header>
+      
+    <ul>
+      {{#each pontos}}
+        {{> ponto}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
