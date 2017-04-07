@@ -1,24 +1,33 @@
 <body>
-    
-    
+
+
   <div class="container">
     <header>
       <h1>Folha de Ponto Virtual</h1>
- 
+
       {{> loginButtons}}
-      
+
       {{#if currentUser}}
         <form class="multiplex">
-            <input type="number" name="mph" step="0.01" placeholder="Money que ganha por hour">
+            <input type="number" name="mph" step="0.01" placeholder="Money que ganha por hour" required>
             <button type="submit">Manda</button>
         </form>
-        
+
       <form class="new-ponto">
           <button>Novo ponto</button>
       </form>
+
+      <form class="drop-own-pontos">
+          <button>Deletar meus pontos</button>
+      </form>
+
+      <form class="drop-all-pontos">
+          <button>Deletar todos os pontos</button>
+      </form>
       {{/if}}
+
     </header>
-      
+
     <ul>
       {{#each pontos}}
         {{> ponto}}

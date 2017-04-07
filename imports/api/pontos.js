@@ -49,7 +49,18 @@ Meteor.methods({
         t = obj[0].total * mult;
 
         return t;
-    }
+    },
+    'pontos.dropPontos'(scope) {
+        check(scope, String);
 
+        // TODO jogar para outra collection -> manter dados como registro.
+
+        if(scope == "own") {
+            Pontos.remove({ username: Meteor.user().username });
+        }
+        else if (scope == "all") {
+            Pontos._dropCollection();
+        }
+    }
 
 });

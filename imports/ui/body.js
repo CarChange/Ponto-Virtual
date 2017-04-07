@@ -30,7 +30,6 @@ Template.body.events({
          swal("Opa", "Deu ruim kkk o count deu " + count);
        }
    },
-
    'submit .multiplex'(evento) {
        evento.preventDefault();
 
@@ -43,6 +42,43 @@ Template.body.events({
        });
 
    },
+   'submit .drop-own-pontos'(event) {
+      event.preventDefault();
+
+      swal({
+          title: "Hey você",
+          text: "Você realmente quer deletar todos os seus pontos?",
+          type: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#DD6B55",
+          confirmButtonText: "Sim. Sei que não vou receber se clicar aqui.",
+          cancelButtonText: "Não me deixe fazer isso!",
+          closeOnConfirm: false
+       },
+       function(){
+         Meteor.call('pontos.dropPontos', "own");
+         swal("Já foi", "Seu trabalho foi deletado.", "success");
+       });
+   },
+   'submit .drop-all-pontos'(event) {
+     event.preventDefault();
+ 
+     swal({
+         title: "Hey você",
+         text: "Você realmente quer deletar todos os pontos?",
+         type: "warning",
+         showCancelButton: true,
+         confirmButtonColor: "#DD6B55",
+         confirmButtonText: "Sim. Sei que todo mundo vai ficar com raiva.",
+         cancelButtonText: "Não me deixe fazer isso!",
+         closeOnConfirm: false
+      },
+      function(){
+        Meteor.call('pontos.dropPontos', "all");
+        swal("Já foi", "Você deletou o trabalho de todo mundo.", "success");
+      });
+   }
+
 
 
 });
