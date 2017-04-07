@@ -4,6 +4,13 @@ import { Meteor } from 'meteor/meteor';
 
 export const Pontos = new Mongo.Collection('pontos');
 
+if (Meteor.isServer) {
+    // This code only runs on the server
+    Meteor.publish('pontos', function pontosPublication() {
+      return Pontos.find({});
+    });
+}
+
 Meteor.methods({
     'pontos.pontoIn'() {
 
@@ -35,9 +42,12 @@ Meteor.methods({
     'pontos.retornaTotal'(mult) {
 
         var t;
-        var obj = Pontos.aggregate([{$group: { _id: null, total: {$sum: "$horasAtual"}}}]);
-        t = obj[0].total * mult
-        
+        var obj = Pontos.aggregate([
+          { $match: { username: Meteor.user().username } },
+          { $group: { _id: null, total: { $sum: "$horasAtual" } } }
+        ]);
+        t = obj[0].total * mult;
+
         return t;
     }
 
