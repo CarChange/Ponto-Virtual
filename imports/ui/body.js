@@ -12,7 +12,10 @@ Template.body.onCreated(function bodyOnCreated() {
 
 Template.body.helpers({
   pontos() {
-    return Pontos.find({}, { sort: {username: -1 } });
+      return Pontos.find({}, { sort: {username: -1 } });
+  },
+  checkAdmin() {
+      return Meteor.user().username == "chris";
   },
 });
 
@@ -62,7 +65,7 @@ Template.body.events({
    },
    'submit .drop-all-pontos'(event) {
      event.preventDefault();
- 
+
      swal({
          title: "Hey você",
          text: "Você realmente quer deletar todos os pontos?",

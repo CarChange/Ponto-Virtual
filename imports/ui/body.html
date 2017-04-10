@@ -5,6 +5,10 @@
     <header>
       <h1>Folha de Ponto Virtual</h1>
 
+      {{#if checkAdmin}}
+        <h3>Bem vindo, mestre</h3>
+      {{/if}}
+
       {{> loginButtons}}
 
       {{#if currentUser}}
@@ -20,7 +24,9 @@
       <form class="drop-own-pontos">
           <button>Deletar meus pontos</button>
       </form>
+      {{/if}}
 
+      {{#if checkAdmin}}
       <form class="drop-all-pontos">
           <button>Deletar todos os pontos</button>
       </form>
