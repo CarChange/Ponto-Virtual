@@ -1,8 +1,0 @@
-{
-  "galaxy.meteor.com": {
-     "env": {
-       "MONGO_URL": "mongodb://<GalaxyCarChange>:<nLDwMyEGcXOIxn38>@<cluster0-shard-00-00-y4zax.mongodb.net>:<27017>,<cluster0-shard-00-01-y4zax.mongodb.net>:<27017>,<cluster0-shard-00-02-y4zax.mongodb.net>:<27017>/<Cluster0>"
-     }
-   }
-}
-
