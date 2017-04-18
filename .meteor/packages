@@ -22,3 +22,4 @@ accounts-ui@1.1.9
 accounts-password@1.3.4
 kevohagan:sweetalert
 meteorhacks:aggregate
+iron:router
