@@ -8,6 +8,7 @@ import './body.html';
 Template.body.onCreated(function bodyOnCreated() {
   // this.state = new ReactiveDict();
   Meteor.subscribe('pontos');
+  Meteor.subscribe('userData');
 });
 
 Template.body.helpers({
@@ -15,7 +16,7 @@ Template.body.helpers({
       return Pontos.find({}, { sort: {username: -1 } });
   },
   checkAdmin() {
-      return Meteor.user().username == "chris";
+      return Meteor.user().isAdmin;
   },
 });
 
