@@ -1,0 +1,10 @@
+<template name="ponto">
+
+    <span class="text"><strong>{{username}}</strong> - {{getDateIn}} {{#unless checked}} até {{getDateOut}}{{/unless}}</span>
+    {{#if checkMarcarHoras username}}
+        <button class="horas">Marcar horas</button>
+    {{/if}}
+    <span class="text"></span>
+    <br>
+    
+</template>
