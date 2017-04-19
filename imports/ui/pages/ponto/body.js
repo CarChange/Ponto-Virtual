@@ -1,8 +1,8 @@
 import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
-import { Pontos } from '../api/pontos.js';
+import { Pontos } from '../../../api/pontos.js';
 
-import './ponto.js';
+import '../../components/ponto/ponto.js';
 import './body.html';
 import '../../components/navbar/navbar.html';
 
