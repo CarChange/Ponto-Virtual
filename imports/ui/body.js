@@ -4,6 +4,7 @@ import { Pontos } from '../api/pontos.js';
 
 import './ponto.js';
 import './body.html';
+import './navbar.html';
 
 Template.body.onCreated(function bodyOnCreated() {
   // this.state = new ReactiveDict();
