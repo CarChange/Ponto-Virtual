@@ -1,19 +1,13 @@
 <body>
-  {{> navbar}}
-
+{{>navbar}}
   <div class="container-fluid">
 
-
-
     <div class="container">
-      <header>
         <h1>Folha de Ponto Virtual</h1>
 
         {{#if checkAdmin}}
           <h3>Bem vindo, mestre</h3>
         {{/if}}
-
- 
 
 
         {{#if currentUser}}
@@ -37,8 +31,6 @@
         </form>
         {{/if}}
 
-
-      </header>
       &nbsp;
     </div> <!-- /container -->
 
