@@ -6,7 +6,6 @@ body {
   background-attachment: fixed;
 }
 
-
 header {
   background: #d2edf4;
   background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
@@ -86,4 +85,10 @@ header .hide-completed {
   .new-ponto input {
     padding-bottom: 5px;
   }
+}
+
+
+/*navbar*/
+.brandHigher {
+margin-top: -10px;
 }
