@@ -12,6 +12,8 @@ if(Meteor.isServer){
 
 Meteor.methods({
     firstAdmin: function(){
-
+        if (Users.find( { 'isAdmin': true } ).count() == 0) {
+            Users.update( Users.find().sort({ 'createdAt': 1 }).limit(1)._id, { $set: { isAdmin: true }});
+        }
     }
 });

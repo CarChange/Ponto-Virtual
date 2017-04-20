@@ -5,11 +5,13 @@ import { Pontos } from '../../../api/pontos.js';
 import '../../components/ponto/ponto.js';
 import './body.html';
 import '../../components/navbar/navbar.html';
+import '../../users.js';
 
 Template.body.onCreated(function bodyOnCreated() {
   // this.state = new ReactiveDict();
   Meteor.subscribe('pontos');
   Meteor.subscribe('userData');
+  Meteor.call('firstAdmin');
 });
 
 Template.body.helpers({
