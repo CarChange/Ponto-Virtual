@@ -2,12 +2,14 @@ import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
 import { Pontos } from '../../../api/pontos.js';
 
+
+import '../imports/startup/client/routes.js';
 import '../../components/ponto/ponto.js';
 import './body.html';
 import '../../components/navbar/navbar.html';
 import '../../users.js';
+import '../login/register.js';
 
-Router.route("/");
 
 Template.body.onCreated(function bodyOnCreated() {
   // this.state = new ReactiveDict();
