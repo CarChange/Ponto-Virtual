@@ -3,7 +3,8 @@ import { Meteor } from 'meteor/meteor';
 import { Pontos } from '../../../api/pontos.js';
 
 import '../../components/ponto/ponto.js';
-import './body.html';
+//import './body.html';
+import '../home/index.html'
 import '../../components/navbar/navbar.html';
 import '../../users.js';
 
