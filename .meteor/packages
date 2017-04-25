@@ -27,6 +27,7 @@ iron:router
 twbs:bootstrap
 ian:accounts-ui-bootstrap-3
 less
+fourseven:scss
 fortawesome:fontawesome
 alanning:roles
 aldeed:simple-schema
