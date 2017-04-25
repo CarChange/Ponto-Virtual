@@ -28,3 +28,7 @@ twbs:bootstrap
 ian:accounts-ui-bootstrap-3
 less
 fortawesome:fontawesome
+alanning:roles
+aldeed:simple-schema
+audit-argument-checks
+mdg:validated-method

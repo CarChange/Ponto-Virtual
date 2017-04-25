@@ -7,6 +7,8 @@ import './body.html';
 import '../../components/navbar/navbar.html';
 import '../../users.js';
 
+Router.route("/");
+
 Template.body.onCreated(function bodyOnCreated() {
   // this.state = new ReactiveDict();
   Meteor.subscribe('pontos');
